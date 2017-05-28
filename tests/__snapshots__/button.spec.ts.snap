@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component color (accent) 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent\\"></button>"
+`;
+
+exports[`Button Component color (colored) 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored\\">
+</button>"
+`;
+
+exports[`Button Component color (primary) 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary\\">
+</button>"
+`;
+
+exports[`Button Component element 1`] = `"<a class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\"></a>"`;
+
+exports[`Button Component fab 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab\\"></button>"
+`;
+
+exports[`Button Component icon 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon\\"></button>"
+`;
+
+exports[`Button Component minifab 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab\\">
+</button>"
+`;
+
+exports[`Button Component no options 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\"></button>"`;
+
+exports[`Button Component no ripple 1`] = `"<button class=\\"mdl-button mdl-js-button\\"></button>"`;
+
+exports[`Button Component raised 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"></button>"
+`;
+
+exports[`Button Component raised with fab, minifab and icon 1`] = `
+"<button class=
+\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"></button>"
+`;
+
+exports[`Button Component with child string 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\">Content</button>"`;

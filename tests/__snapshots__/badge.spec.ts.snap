@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge Component data attribute 1`] = `"<span data=\\"42\\" data-badge=\\"42\\" class=\\"mdl-badge\\">add</span>"`;
+
+exports[`Badge Component data attribute 2`] = `"<span data=\\"42\\" data-badge=\\"42\\" class=\\"mdl-badge\\">add</span>"`;
+
+exports[`Badge Component data-badge and data attribute 1`] = `"<span data-badge=\\"42\\" data=\\"1\\" class=\\"mdl-badge\\">add</span>"`;
+
+exports[`Badge Component data-badge attribute 1`] = `"<span data-badge=\\"42\\" class=\\"mdl-badge\\">add</span>"`;
+
+exports[`Badge Component icon 1`] = `
+"<div class=\\"material-icons mdl-badge\\">
+  add
+</div>"
+`;
+
+exports[`Badge Component no options 1`] = `"<span class=\\"mdl-badge\\">add</span>"`;
+
+exports[`Badge Component nobackground 1`] = `
+"<span nobackground=\\"\\" class=
+\\"mdl-badge mdl-badge--no-background\\">add</span>"
+`;
+
+exports[`Badge Component overlap 1`] = `"<span overlap=\\"\\" class=\\"mdl-badge mdl-badge--overlap\\">add</span>"`;
