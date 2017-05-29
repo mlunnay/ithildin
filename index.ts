@@ -2,6 +2,7 @@ import * as Button from './src/button';
 import * as Badge from './src/badge';
 import * as Icon from './src/icon';
 import * as Layout from './src/layout';
+import * as Chip from './src/chip';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
@@ -33,5 +34,6 @@ export {
     Button,
     Badge,
     Icon,
-    Layout
+    Layout,
+    Chip
 }
