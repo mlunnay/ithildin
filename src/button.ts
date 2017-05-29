@@ -6,6 +6,7 @@ import * as m from 'mithril';
  * ## Attributes
  * | attribute | type    | default   | description |
  * |-----------|---------|-----------|------------|
+ * | element   | string  | 'button'  | The base element type for the button |
  * | raised    | boolean | false     | makes the button raised |
  * | ripple    | boolean | true      | adds the ripple effect to the button |
  * | fab       | boolean | false     | makes the button a floating action button, mutually exclusive of *raised* and *icon* |
