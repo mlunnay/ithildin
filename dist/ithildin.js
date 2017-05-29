@@ -82,6 +82,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var m = __webpack_require__(0);
 /**
  * A material badge.
+ *
+ * ## Attributes
+ * | attribute | type    | default   | description |
+ * |-----------|---------|-----------|------------|
+ * | icon      | boolean | false     | Treats the child element as a material icon definition |
+ * | overlap   | boolean | false     | Make the badge overlap with its container |
+ * | nobackground | boolean | false  | Applies open-circle effect to badge |
+ * | data | string |   | Assigns string value to badge. This is transformed to data-badge attribute |
+ * | data-badge | string |   | Assigns string value to badge |
  */
 var Badge = (function () {
     function Badge() {
@@ -118,6 +127,7 @@ var m = __webpack_require__(0);
 /**
  * A materialize Button.
  *
+ * ## Attributes
  * | attribute | type    | default   | description |
  * |-----------|---------|-----------|------------|
  * | raised    | boolean | false     | makes the button raised |
@@ -195,6 +205,9 @@ exports.Icon = Icon;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var m = __webpack_require__(0);
+/**
+ * Represents a material design spacer for laying out of elements.
+ */
 var LayoutSpacer = (function () {
     function LayoutSpacer() {
     }
@@ -221,6 +234,28 @@ var Icon = __webpack_require__(3);
 exports.Icon = Icon;
 var Layout = __webpack_require__(4);
 exports.Layout = Layout;
+// polyfill for Object.assign.
+if (typeof Object.assign != 'function') {
+    Object.assign = function (target, _varArgs) {
+        'use strict';
+        if (target == null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
+        var to = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var nextSource = arguments[index];
+            if (nextSource != null) {
+                for (var nextKey in nextSource) {
+                    // Avoid bugs when hasOwnProperty is shadowed
+                    if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                        to[nextKey] = nextSource[nextKey];
+                    }
+                }
+            }
+        }
+        return to;
+    };
+}
 
 
 /***/ })

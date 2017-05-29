@@ -1,0 +1,25 @@
+sudo: false
+
+# Only care about running tests against latest node
+language: node_js
+node_js:
+ - node
+
+install:
+  - npm install
+
+# create zip files for both minimized and unminimized javascript and source maps
+before_deploy:
+  - cd dist && zip ithildin.zip ithildin.js ithildin.js.map && zip ithildin.min.zip ithildin.min.js ithildin.min.js.map
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  file:
+    - "dist/ithildin.js"
+    - "dist/ithildin.min.js"
+    - "dist/ithildin.zip"
+    - "dist/ithildin.min.zip"
+  skip_cleanup: true
+  on:
+    tags: true

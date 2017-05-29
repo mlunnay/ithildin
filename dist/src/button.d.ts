@@ -3,6 +3,7 @@ import * as m from 'mithril';
 /**
  * A materialize Button.
  *
+ * ## Attributes
  * | attribute | type    | default   | description |
  * |-----------|---------|-----------|------------|
  * | raised    | boolean | false     | makes the button raised |
