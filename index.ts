@@ -3,6 +3,9 @@ import * as Badge from './src/badge';
 import * as Icon from './src/icon';
 import * as Layout from './src/layout';
 import * as Chip from './src/chip';
+import * as ProgressBar from './src/progressBar';
+import * as Spinner from './src/spinner';
+import * as Menu from './src/menu';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
@@ -35,5 +38,8 @@ export {
     Badge,
     Icon,
     Layout,
-    Chip
+    Chip,
+    ProgressBar,
+    Spinner,
+    Menu
 }

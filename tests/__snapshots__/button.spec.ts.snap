@@ -1,52 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button Component color (accent) 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent\\"></button>"
+"<button color=\\"accent\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
 exports[`Button Component color (colored) 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored\\">
-</button>"
+"<button color=\\"colored\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
 exports[`Button Component color (primary) 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary\\">
-</button>"
+"<button color=\\"primary\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--primary\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
-exports[`Button Component element 1`] = `"<a class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\"></a>"`;
+exports[`Button Component element 1`] = `"<a element=\\"a\\" class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></a>"`;
 
 exports[`Button Component fab 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab\\"></button>"
+"<button fab=\\"\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
 exports[`Button Component icon 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon\\"></button>"
+"<button icon=\\"\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
 exports[`Button Component minifab 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab\\">
-</button>"
+"<button minifab=\\"\\" class=
+\\"mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
-exports[`Button Component no options 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\"></button>"`;
+exports[`Button Component no options 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button>"`;
 
-exports[`Button Component no ripple 1`] = `"<button class=\\"mdl-button mdl-js-button\\"></button>"`;
+exports[`Button Component no ripple 1`] = `
+"<button class=\\"mdl-button mdl-js-button\\" data-upgraded=
+\\",MaterialButton\\"></button>"
+`;
 
 exports[`Button Component raised 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"></button>"
+"<button raised=\\"\\" class=
+\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
 exports[`Button Component raised with fab, minifab and icon 1`] = `
-"<button class=
-\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"></button>"
+"<button raised=\\"\\" fab=\\"\\" minifab=\\"\\" icon=\\"\\" class=
+\\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect\\"
+data-upgraded=\\",MaterialButton,MaterialRipple\\"><span class=
+\\"mdl-button__ripple-container\\"><span class=
+\\"mdl-ripple\\"></span></span></button>"
 `;
 
-exports[`Button Component with child string 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\">Content</button>"`;
+exports[`Button Component with child string 1`] = `"<button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Content<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button>"`;

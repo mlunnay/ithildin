@@ -13,14 +13,14 @@ describe('Button Component', () => {
     it('element', () => {
         const cmp = m(Button, { 'element': 'a'});
         const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<a class="mdl-button mdl-js-button mdl-js-ripple-effect');
-        expect(html).toContain('</a>');
+        expect(html).toContain('class="mdl-button mdl-js-button mdl-js-ripple-effect');
+        expect(html).toContain('<a ');
         expect(html).toMatchSnapshot();
     });
     it('with child string', () => {
         const cmp = m(Button, 'Content');
         const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<button class="mdl-button mdl-js-button mdl-js-ripple-effect">Content</button>');
+        expect(html).toContain('Content');
         expect(html).toMatchSnapshot();
     });
     it('no ripple', () => {

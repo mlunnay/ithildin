@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu children 1`] = `
+"<button id=\\"__menu__3\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+<ul for=\\"__menu__3\\" class=\\"mdl-menu mdl-js-menu\\">
+  <li class=\\"mdl-menu__item\\">one
+  </li>
+  <li class=\\"mdl-menu__item\\">two
+  </li>
+</ul>"
+`;
+
+exports[`Menu icon 1`] = `
+"<button icon=\\"\\" id=\\"__menu__2\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">add</i></button>
+<ul for=\\"__menu__2\\" class=\\"mdl-menu mdl-js-menu\\"></ul>"
+`;
+
+exports[`Menu no options 1`] = `
+"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+<ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\"></ul>"
+`;

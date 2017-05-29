@@ -1,4 +1,5 @@
 import * as m from 'mithril';
+import 'material-design-lite';
 
 /**
  * A materialize Button.
@@ -15,6 +16,10 @@ import * as m from 'mithril';
  * | color     | string  | undefined | this makes the button colored. Valide values are:</br> colored: applies colored display effect (primary or accent color, depending on the type of button)</br> primary: applies primary color display effect</br> accent: applies accent color display effect |
  */
 export class Button implements m.ClassComponent<m.Attributes> {
+    oncreate(vnode: m.VnodeDOM<m.Attributes, this>) {
+        componentHandler.upgradeElement(<HTMLElement>vnode.dom);
+    }
+
     view(vnode: m.Vnode<m.Attributes, this>) {
         var classes = '.mdl-button.mdl-js-button';
         if(vnode.attrs.raised)

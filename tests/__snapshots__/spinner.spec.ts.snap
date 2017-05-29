@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner active (false) 1`] = `
+"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-upgraded\\">
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-2\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-3\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-4\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner no options 1`] = `
+"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-active is-upgraded\\">
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-2\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-3\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-4\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+</div>"
+`;
+
+exports[`Spinner single color 1`] = `
+"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-active mdl-spinner--single-color is-upgraded\\">
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-2\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-3\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+  <div class=\\"mdl-spinner__layer mdl-spinner__layer-4\\">
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__gap-patch\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+    <div class=\\"mdl-spinner__circle-clipper mdl-spinner__right\\">
+      <div class=\\"mdl-spinner__circle\\"></div>
+    </div>
+  </div>
+</div>"
+`;
