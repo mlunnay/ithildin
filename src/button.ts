@@ -37,6 +37,6 @@ export class Button implements m.ClassComponent<m.Attributes> {
         if(vnode.attrs.color === 'accent')
             classes += '.mdl-button--accent';
         
-        return m((vnode.attrs.element || 'button') + classes, vnode.children);
+        return m((vnode.attrs.element || 'button') + classes, vnode.attrs, vnode.children);
     }
 } 
