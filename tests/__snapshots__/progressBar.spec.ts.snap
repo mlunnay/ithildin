@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chip Component no options 1`] = `
+"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-progress is-upgraded\\">
+  <div style=\\"width: 0%;\\" class=\\"progressbar bar bar1\\"></div>
+  <div style=\\"width: 100%;\\" class=\\"bufferbar bar bar2\\"></div>
+  <div style=\\"width: 0%;\\" class=\\"auxbar bar bar3\\"></div>
+</div>"
+`;
