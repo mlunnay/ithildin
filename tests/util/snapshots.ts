@@ -2,7 +2,7 @@
 import * as m from 'mithril';
 import { tidy_html5 } from 'tidy-html5';
 import * as render from 'mithril-node-render';
-import {} from 'jest';
+import { } from 'jest';
 
 // I need to fix mithril-node-render.d.ts to not need this
 type render = (view: any, attrs: any, options: any) => string;
@@ -19,7 +19,7 @@ export const defaultHtmlTidyOptions = {
   'new-inline-tags': ['path', 'polyline', 'line', 'polygon']
 };
 
-export const tidy = (vnodes: m.Vnode<any, any>, htmltidyOptions?: {[key: string]: any}) => {
+export const tidy = (vnodes: m.Vnode<any, any>, htmltidyOptions?: { [key: string]: any }) => {
   const htmlElement = document.createElement('div');
   m.render(htmlElement, vnodes);
   const html = htmlElement.innerHTML;
@@ -27,34 +27,49 @@ export const tidy = (vnodes: m.Vnode<any, any>, htmltidyOptions?: {[key: string]
   return tidy_html5(html, options).trim();
 };
 
-export const tidyHtml = (html: string, htmltidyOptions?: {[key: string]: any}) => {
+export const tidyHtml = (html: string, htmltidyOptions?: { [key: string]: any }) => {
   const options = (<any>Object).assign({}, defaultHtmlTidyOptions, htmltidyOptions);
   return tidy_html5(html, options).trim();
-  };
+};
 
-export type ClassComponent = m.ClassComponent<m.Attributes>;
-
-export interface Test{
+export interface Test {
   name: string;
   component: any;
   children?: m.Children[];
   attrs: m.Attributes;
 }
 
-export const runSnapshots = (tests: Test[]) => (
+export const runSnapshots = (tests: Test[]) => {
   tests.forEach(test =>
     it(test.name, () => {
       const html = tidy(m(test.component, test.attrs, test.children));
       expect(html).toMatchSnapshot();
     })
   )
-);
+};
 
-export const runServerSnapshots = (tests: Test[], renderer: render) => (
+export const runServerSnapshots = (tests: Test[], renderer: render) => {
   tests.forEach(test =>
     it(test.name, () => {
       const html = renderer(test.component, test.attrs, test.children);
       expect(html).toMatchSnapshot();
     })
   )
-);
+};
+
+// only drills down first child of parent elements
+export const getHTMLAtDepthInternal = (element: HTMLElement, depth: number): string => {
+  if(depth === 0)
+    return (<HTMLElement>element.parentElement).innerHTML;
+  return element.children ? getHTMLAtDepthInternal(<HTMLElement>element.children[0], depth - 1) : "";
+};
+
+export const getHTMLAtDepth = (vnode: m.Vnode<any, any>, depth: number = 0) => {
+  var parent = document.createElement('div');
+  m.render(parent, vnode);
+  return getHTMLAtDepthInternal(<HTMLElement>parent.children[0], depth);
+};
+
+export const getFirstHTMLTag = (html: string) => {
+  return (html.match(/<[^>]*>/) || [''])[0];
+};

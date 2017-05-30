@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snackbar no options 1`] = `
+"<div class=\\"mdl-snackbar mdl-js-snackbar\\" data-upgraded=\\",MaterialSnackbar\\">
+  <div class=\\"mdl-snackbar__text\\"></div><button type=\\"button\\" class=\\"mdl-snackbar__action\\" aria-hidden=\\"true\\"></button>
+</div>"
+`;

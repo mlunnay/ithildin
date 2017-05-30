@@ -6,6 +6,8 @@ import * as Chip from './src/chip';
 import * as ProgressBar from './src/progressBar';
 import * as Spinner from './src/spinner';
 import * as Menu from './src/menu';
+import * as Slider from './src/slider';
+import * as Snackbar from './src/snackbar';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
@@ -41,5 +43,7 @@ export {
     Chip,
     ProgressBar,
     Spinner,
-    Menu
+    Menu,
+    Slider,
+    Snackbar
 }

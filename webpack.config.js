@@ -27,7 +27,7 @@ module.exports = function (env) {
 
         externals: {
             mithril: 'mithril',
-            MaterialDesignLite: 'MaterialDesignLite'
+            'material-design-lite': 'material-design-lite'
         },
 
         plugins: [
