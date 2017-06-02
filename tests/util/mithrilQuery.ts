@@ -3,7 +3,7 @@ import * as cssauron from 'cssauron';
 
 export const language = cssauron({
     tag: (node: any) => {
-        return node.tag;
+        return node.instance ? node.instance.tag : node.tag;
     },
     contents: (node) => {
         return node.dom.textContent || '';
@@ -12,10 +12,10 @@ export const language = cssauron({
         return node.dom.id;
     },
     class: (node) => {
-        return node.attrs && node.attrs.className || '';
+        return (node.attrs && node.attrs.className) || '';
     },
     parent: (node) => {
-        return node.parent || '';
+        return node.parent || node.instance && node.instance.parent || '';
     },
     children: (node) => {
         var children = (node.instance && node.instance.children) || node.children || []
