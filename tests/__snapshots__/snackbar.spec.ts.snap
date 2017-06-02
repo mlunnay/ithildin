@@ -5,3 +5,11 @@ exports[`Snackbar no options 1`] = `
   <div class=\\"mdl-snackbar__text\\"></div><button type=\\"button\\" class=\\"mdl-snackbar__action\\" aria-hidden=\\"true\\"></button>
 </div>"
 `;
+
+exports[`Snackbar showSnackbar 1`] = `
+"<div class=\\"mdl-snackbar mdl-js-snackbar mdl-snackbar--active\\" data-upgraded=\\",MaterialSnackbar\\" aria-hidden=\\"false\\">
+  <div class=\\"mdl-snackbar__text\\">
+    test message
+  </div><button type=\\"button\\" class=\\"mdl-snackbar__action\\">close</button>
+</div>"
+`;

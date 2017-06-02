@@ -1,82 +1,85 @@
 import { } from 'jest';
 import * as m from 'mithril';
-import { tidy } from './util/snapshots';
+import { tidyHtml } from './util/snapshots';
 import { Button } from '../src/button';
+import { MithrilQuery } from './util/mithrilQuery';
 
 describe('Button Component', () => {
     it('no options', () => {
-        const cmp = m(Button);
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<button class="mdl-button mdl-js-button mdl-js-ripple-effect');
+        const cmp = new MithrilQuery(Button);
+        expect(cmp).selectorToHave('button[data-upgraded=",MaterialButton,MaterialRipple"].mdl-button.mdl-js-button.mdl-js-ripple-effect', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('element', () => {
-        const cmp = m(Button, { 'element': 'a'});
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('class="mdl-button mdl-js-button mdl-js-ripple-effect');
-        expect(html).toContain('<a ');
+        const cmp = new MithrilQuery(m(Button, { 'element': 'a'}));
+        expect(cmp).selectorToHave('a[data-upgraded=",MaterialButton,MaterialRipple"].mdl-button.mdl-js-button.mdl-js-ripple-effect', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('with child string', () => {
-        const cmp = m(Button, 'Content');
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('Content');
+        const cmp = new MithrilQuery(m(Button, 'Content'));
+        expect(cmp).selectorToContain('Content');
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('no ripple', () => {
-        const cmp = m(Button, { ripple: false });
-        const html = tidy(cmp);
-        expect(html).not.toContain('mdl-js-ripple-effect');
+        const cmp = new MithrilQuery(m(Button, { ripple: false }));
+        expect(cmp).not.selectorToHave('.mdl-js-ripple-effect', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('raised', () => {
-        const cmp = m(Button, { raised: true });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--raised');
+        const cmp = new MithrilQuery(m(Button, { raised: true }));
+        expect(cmp).selectorToHave('.mdl-button--raised', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('raised with fab, minifab and icon', () => {
-        const cmp = m(Button, { raised: true, fab: true, minifab: true, icon: true });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--raised');
-        expect(html).not.toContain('mdl-button--fab');
+        const cmp = new MithrilQuery(m(Button, { raised: true, fab: true, minifab: true, icon: true }));
+        expect(cmp).selectorToHave('.mdl-button--raised', 1);
+        expect(cmp).not.selectorToHave('.mdl-button--fab');
+        expect(cmp).not.selectorToHave('.mdl-button--mini-fab');
+        expect(cmp).not.selectorToHave('.mdl-button--mini-fab');
+        expect(cmp).not.selectorToHave('.mdl-button--mini-fab');
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('fab', () => {
-        const cmp = m(Button, { fab: true });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--fab');
+        const cmp = new MithrilQuery(m(Button, { fab: true }));
+        expect(cmp).selectorToHave('.mdl-button--fab', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('minifab', () => {
-        const cmp = m(Button, { minifab: true });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--fab');
-        expect(html).toContain('mdl-button--mini-fab');
+        const cmp = new MithrilQuery(m(Button, { minifab: true }));
+        expect(cmp).selectorToHave('.mdl-button--fab', 1);
+        expect(cmp).selectorToHave('.mdl-button--mini-fab', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('icon', () => {
-        const cmp = m(Button, { icon: true });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--icon');
+        const cmp = new MithrilQuery(m(Button, { icon: true }));
+        expect(cmp).selectorToHave('.mdl-button--icon', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('color (colored)', () => {
-        const cmp = m(Button, { color: 'colored' });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--colored');
+        const cmp = new MithrilQuery(m(Button, { color: 'colored' }));
+        expect(cmp).selectorToHave('.mdl-button--colored', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('color (primary)', () => {
-        const cmp = m(Button, { color: 'primary' });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--primary');
+        const cmp = new MithrilQuery(m(Button, { color: 'primary' }));
+        expect(cmp).selectorToHave('.mdl-button--primary', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('color (accent)', () => {
-        const cmp = m(Button, { color: 'accent' });
-        const html = tidy(cmp);
-        expect(html).toContain('mdl-button--accent');
+        const cmp = new MithrilQuery(m(Button, { color: 'accent' }));
+        expect(cmp).selectorToHave('.mdl-button--accent', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
 });

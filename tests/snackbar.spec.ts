@@ -1,33 +1,24 @@
 import { } from 'jest';
 import * as m from 'mithril';
-import { tidy, getHTMLAtDepth, getFirstHTMLTag } from './util/snapshots';
+import { tidyHtml } from './util/snapshots';
 import { Snackbar } from '../src/snackbar';
+import { MithrilQuery } from './util/mithrilQuery'
 
 describe('Snackbar', () => {
     it('no options', () => {
-        const cmp = m(Snackbar);
-        const html = tidy(cmp, { wrap: 0 });
-        const firstDiv = getFirstHTMLTag(html);
-        expect(firstDiv).toContain('<div');
-        expect(firstDiv).toContain('data-upgraded=",MaterialSnackbar"');
-        expect(firstDiv).toContain('mdl-snackbar');
-        expect(firstDiv).toContain('mdl-js-snackbar"');
-        const secondDiv = getFirstHTMLTag(getHTMLAtDepth(cmp, 1));
-        expect(secondDiv).toContain('<div');
-        expect(secondDiv).toContain('mdl-snackbar__text');
-        const button = getHTMLAtDepth(cmp, 1);
-        expect(button).toContain('<button');
-        expect(button).toContain('mdl-snackbar__action');
+        const cmp = new MithrilQuery(Snackbar);
+        expect(cmp).selectorToHave('div[data-upgraded=",MaterialSnackbar"].mdl-snackbar.mdl-js-snackbar', 1);
+        expect(cmp).selectorToHave('div > div.mdl-snackbar__text', 1);
+        expect(cmp).selectorToHave('div > button.mdl-snackbar__action', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('showSnackbar', () => {
-        const snackbar = new Snackbar();
-        const cmp = m(snackbar);
-        const parent = document.createElement('div');
-        m.render(parent, cmp);
-        snackbar.showSnackbar({ message: 'test message', actionText: 'close', actionHandler: (_e) => {} });
-        m.redraw();
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('test message')
+        const snackbar = <m.VnodeDOM<Snackbar, Snackbar>>m(Snackbar)
+        var cmp = new MithrilQuery(snackbar);
+        snackbar.state.showSnackbar({ message: 'test message', actionText: 'close', actionHandler: () => {} });
+        expect(cmp).selectorToContain('test message')
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
+        expect(html).toMatchSnapshot();
     });
 });

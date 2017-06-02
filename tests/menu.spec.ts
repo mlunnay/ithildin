@@ -1,7 +1,8 @@
 import { } from 'jest';
 import * as m from 'mithril';
-import { tidy } from './util/snapshots';
+import { tidyHtml } from './util/snapshots';
 import { Menu } from '../src/menu';
+import { MithrilQuery } from './util/mithrilQuery';
 
 describe('Menu', () => {
     beforeEach(() => {
@@ -9,75 +10,78 @@ describe('Menu', () => {
         Menu.menuIdCounter = 0;
     });
     it('no options', () => {
-        const cmp = m(Menu);
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<button');
-        expect(html).toContain('id="__menu__1"');
-        expect(html).toContain('<i class=\"material-icons\">more_vert</i>');
-        expect(html).toContain('<ul for="__menu__1"');
+        const cmp = new MithrilQuery(Menu);
+        expect(cmp).selectorToHave('button#__menu__1', 1);
+        expect(cmp).selectorToHave('i.material-icons:contains(more_vert)', 1);
+        expect(cmp).selectorToHave('ul[for="__menu__1"]', 1);
+        expect(cmp).not.selectorToHave('li');
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('id', () => {
-        const cmp = m(Menu, { id: '__menu__id' });
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('id="__menu__id"');
+        const cmp = new MithrilQuery(m(Menu, { id: '__menu__id' }));
+        expect(cmp).selectorToHave('button#__menu__id', 1);
+        expect(cmp).selectorToHave('ul[for="__menu__id"]', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('icon', () => {
-        const cmp = m(Menu, { icon: 'add' });
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<i class=\"material-icons\">add</i>');
+        const cmp = new MithrilQuery(m(Menu, { icon: 'add' }));
+        expect(cmp).selectorToHave('i.material-icons:contains(add)', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('children', () => {
-        const cmp = m(Menu, ['one', 'two']);
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<li class="mdl-menu__item');
+        const cmp = new MithrilQuery(m(Menu, ['one', 'two']));
+        expect(cmp).selectorToHave('li.mdl-menu__item:contains(one)', 1);
+        expect(cmp).selectorToHave('li.mdl-menu__item:contains(two)', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('disabled child', () => {
-        const cmp = m(Menu, m('div', { disabled: true }));
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('<li disabled');
+        const cmp = new MithrilQuery(m(Menu, m('div', { disabled: true })));
+        expect(cmp).selectorToHave('li[disabled]', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('menu divider child', () => {
-        const cmp = m(Menu, m('div', { divider: true }));
-        const html = tidy(cmp, { wrap: 0 });
-        expect(html).toContain('mdl-menu__item--full-bleed-divider');
+        const cmp = new MithrilQuery(m(Menu, m('div', { divider: true })));
+        expect(cmp).selectorToHave('li.mdl-menu__item--full-bleed-divider', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     describe('align', () => {
         it('no option', () => {
-            const cmp = m(Menu);
-            const html = tidy(cmp, { wrap: 0 });
-            expect(html).not.toContain('mdl-menu--top');
-            expect(html).not.toContain('mdl-menu--bottom');
+            const cmp = new MithrilQuery(Menu);
+            expect(cmp).not.selectorToHave('ul.mdl-menu--top.mdl-menu--top-right.mdl-menu--bottom-right', 1);
+            const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
             expect(html).toMatchSnapshot();
         });
         it('bottom-left', () => {
-            const cmp = m(Menu, { align: 'bottom-left' });
-            const html = tidy(cmp, { wrap: 0 });
-            expect(html).not.toContain('mdl-menu--top-left');
-            expect(html).not.toContain('mdl-menu--bottom');
+            const cmp = new MithrilQuery(m(Menu, { align: 'bottom-left' }));
+            expect(cmp).not.selectorToHave('ul.mdl-menu--top-left.mdl-menu--top-right.mdl-menu--bottom-right', 1);
+            const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
             expect(html).toMatchSnapshot();
         });
         it('bottom-right', () => {
-            const cmp = m(Menu, { align: 'bottom-right' });
-            const html = tidy(cmp, { wrap: 0 });
-            expect(html).toContain('mdl-menu--bottom-right');
+            const cmp = new MithrilQuery(m(Menu, { align: 'bottom-right' }));
+            expect(cmp).not.selectorToHave('ul.mdl-menu--top-left.mdl-menu--top-right', 1);
+            expect(cmp).selectorToHave('ul.mdl-menu--bottom-right', 1);
+            const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
             expect(html).toMatchSnapshot();
         });
         it('top-left', () => {
-            const cmp = m(Menu, { align: 'top-left' });
-            const html = tidy(cmp, { wrap: 0 });
-            expect(html).toContain('mdl-menu--top-left');
+            const cmp = new MithrilQuery(m(Menu, { align: 'top-left' }));
+            expect(cmp).not.selectorToHave('ul.mdl-menu--bottom-right.mdl-menu--top-right', 1);
+            expect(cmp).selectorToHave('ul.mdl-menu--top-left', 1);
+            const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
             expect(html).toMatchSnapshot();
         });
         it('top-right', () => {
-            const cmp = m(Menu, { align: 'top-right' });
-            const html = tidy(cmp, { wrap: 0 });
-            expect(html).toContain('mdl-menu--top-right');
+            const cmp = new MithrilQuery(m(Menu, { align: 'top-right' }));
+            expect(cmp).not.selectorToHave('ul.mdl-menu--bottom-right.mdl-menu--top-left', 1);
+            expect(cmp).selectorToHave('ul.mdl-menu--top-right', 1);
+            const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
             expect(html).toMatchSnapshot();
         });
     });
