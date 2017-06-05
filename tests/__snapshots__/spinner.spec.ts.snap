@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Spinner active (false) 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-upgraded\\">
+"<div data-upgraded=\\",MaterialSpinner\\" class=\\"mdl-spinner is-upgraded is-active\\">
   <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
     <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
       <div class=\\"mdl-spinner__circle\\"></div>
@@ -50,7 +50,7 @@ exports[`Spinner active (false) 1`] = `
 `;
 
 exports[`Spinner no options 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-active is-upgraded\\">
+"<div data-upgraded=\\",MaterialSpinner\\" class=\\"mdl-spinner is-upgraded is-active\\">
   <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
     <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
       <div class=\\"mdl-spinner__circle\\"></div>
@@ -99,7 +99,7 @@ exports[`Spinner no options 1`] = `
 `;
 
 exports[`Spinner single color 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-spinner is-active mdl-spinner--single-color is-upgraded\\">
+"<div data-upgraded=\\",MaterialSpinner\\" class=\\"mdl-spinner is-upgraded is-active\\">
   <div class=\\"mdl-spinner__layer mdl-spinner__layer-1\\">
     <div class=\\"mdl-spinner__circle-clipper mdl-spinner__left\\">
       <div class=\\"mdl-spinner__circle\\"></div>

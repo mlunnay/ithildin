@@ -39,6 +39,8 @@ export class Card implements m.ClassComponent<m.Attributes> {
             if(vnode.attrs.title.border)
                 classes += '.mdl-card--border';
             let child = vnode.attrs.title.content;
+            if(typeof vnode.attrs.title.content === 'string')
+                child = m('h2.mdl-card__title-text', vnode.attrs.title.content);
             if(typeof vnode.attrs.title === 'string')
                 child = m('h2.mdl-card__title-text', vnode.attrs.title);
             children.push(m(classes, child));

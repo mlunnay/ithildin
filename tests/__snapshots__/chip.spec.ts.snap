@@ -4,10 +4,10 @@ exports[`Chip Component button 1`] = `"<button class=\\"mdl-chip\\"><span class=
 
 exports[`Chip Component contact 1`] = `"<span class=\\"mdl-chip\\"><img src=\\"img.png\\" class=\\"mdl-chip__contact\\"><span class=\\"mdl-chip__text\\">Contact chip</span></span>"`;
 
-exports[`Chip Component deletable (deletelink) 1`] = `"<span deletable=\\"\\" deletelink=\\"#\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Deletable chip</span><a href=\\"#\\" class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></a></span>"`;
+exports[`Chip Component deletable (deletelink) 1`] = `"<span deletable=\\"\\" deletelink=\\"#\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Basic chip</span><a href=\\"#\\" class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></a></span>"`;
 
-exports[`Chip Component deletable (ondelete) 1`] = `"<span deletable=\\"\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Deletable chip</span><button class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></button></span>"`;
+exports[`Chip Component deletable (ondelete) 1`] = `"<span deletable=\\"\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Basic chip</span><button class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></button></span>"`;
 
-exports[`Chip Component deletable (true) 1`] = `"<span deletable=\\"\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Deletable chip</span><button class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></button></span>"`;
+exports[`Chip Component deletable (true) 1`] = `"<span deletable=\\"\\" class=\\"mdl-chip mdl-chip--deletable\\"><span class=\\"mdl-chip__text\\">Basic chip</span><button class=\\"mdl-chip__action\\"><i class=\\"material-icons\\">cancel</i></button></span>"`;
 
 exports[`Chip Component no options 1`] = `"<span class=\\"mdl-chip\\"><span class=\\"mdl-chip__text\\">Basic chip</span></span>"`;

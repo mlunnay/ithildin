@@ -1,43 +1,43 @@
 import { } from 'jest';
 import * as m from 'mithril';
-import { tidy } from './util/snapshots';
+import { tidyHtml } from './util/snapshots';
 import { Spinner } from '../src/spinner';
+import { MithrilQuery } from './util/mithrilQuery'
 
 describe('Spinner', () => {
     it('no options', () => {
-        const cmp = m(Spinner);
-        const html = tidy(cmp, { wrap: 0 });
-        //console.log(html);
-        expect(html).toContain('class="mdl-spinner is-active is-upgraded"');
-        expect(html).toContain('data-upgraded=",MaterialProgress"');
-        expect(html).toContain(`<div class="mdl-spinner__layer mdl-spinner__layer-1">
-    <div class="mdl-spinner__circle-clipper mdl-spinner__left">
-      <div class="mdl-spinner__circle"></div>
-    </div>
-    <div class="mdl-spinner__gap-patch">
-      <div class="mdl-spinner__circle"></div>
-    </div>
-    <div class="mdl-spinner__circle-clipper mdl-spinner__right">
-      <div class="mdl-spinner__circle"></div>
-    </div>
-  </div>`);
-        expect(html).toContain('mdl-spinner__layer-2');
-        expect(html).toContain('mdl-spinner__layer-3');
-        expect(html).toContain('mdl-spinner__layer-4');
+        const cmp = new MithrilQuery(Spinner);
+        expect(cmp).selectorToHave('div[data-upgraded=",MaterialSpinner"].mdl-spinner.is-active.is-upgraded', 1);
+        for(var i = 1; i < Spinner.mdlSpinnerLayerCount; i++)
+            expect(cmp).selectorToHave('div.mdl-spinner__layer.mdl-spinner__layer-' + i);
+        expect(cmp).selectorToHave('div > div > div.mdl-spinner__circle-clipper.mdl-spinner__left', Spinner.mdlSpinnerLayerCount);
+        expect(cmp).selectorToHave('div > div > div > div.mdl-spinner__circle', 3 * Spinner.mdlSpinnerLayerCount);
+        expect(cmp).selectorToHave('div > div > div.mdl-spinner__gap-patch', Spinner.mdlSpinnerLayerCount);
+        expect(cmp).selectorToHave('div > div > div.mdl-spinner__circle-clipper.mdl-spinner__right', Spinner.mdlSpinnerLayerCount);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('active (false)', () => {
-        const cmp = m(Spinner, { active: false });
-        const html = tidy(cmp, { wrap: 0 });
-        //console.log(html);
-        expect(html).not.toContain('is-active');
+        const cmp = new MithrilQuery(Spinner);
+        expect(cmp).not.selectorToHave('div[data-upgraded=",MaterialSpinner"]is-active', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
     });
     it('single color', () => {
-        const cmp = m(Spinner, { singleColor: true });
-        const html = tidy(cmp, { wrap: 0 });
-        //console.log(html);
-        expect(html).toContain('mdl-spinner--single-color');
+        const cmp = new MithrilQuery(Spinner);
+        expect(cmp).not.selectorToHave('div[data-upgraded=",MaterialSpinner"].mdl-spinner.is-active.is-upgraded.mdl-spinner--single-color', 1);
+        const html = tidyHtml(cmp.toHtml(), { wrap: 0 });
         expect(html).toMatchSnapshot();
+    });
+    it('set active(false)', (done) => {
+        const spinner = <m.VnodeDOM<any, any>>m(Spinner);
+        const cmp = new MithrilQuery(spinner);
+        spinner.state.active(false);
+        expect.assertions(1);
+        setTimeout(() => {
+            cmp.redraw();
+            expect(cmp.vnode.instance.attrs.className).not.toContain('is-active');
+            done();
+        }, Math.floor(1000 / 60));
     });
 });

@@ -17,16 +17,22 @@ import { Icon } from './icon';
  */
 export class Menu implements m.ClassComponent<m.Attributes> {
     static menuIdCounter = 0;
+    private id: string;
+
+    oninit(vnode: any) {
+        this.id = vnode.attrs.id ? vnode.attrs.id : '__menu__' + ++Menu.menuIdCounter;
+    }
 
     oncreate(vnode: any) {
         componentHandler.upgradeElement(vnode.instance.children[1].dom);
     }
 
     view(vnode: m.Vnode<m.Attributes, this>) {
-        var attrs: m.Attributes = (<any>Object).assign({}, vnode.attrs);
-        attrs.id = attrs.id || '__menu__' + ++Menu.menuIdCounter;
-        attrs.icon = true;
-        attrs.ripple = false;
+        var attrs: m.Attributes = (<any>Object).assign({
+            icon: true,
+            ripple: false,
+            id: this.id
+        }, vnode.attrs);
         
         var children = vnode.children || [];
         if(!Array.isArray(children))
@@ -42,7 +48,7 @@ export class Menu implements m.ClassComponent<m.Attributes> {
 
         return [
             m(Button, attrs, m(Icon, vnode.attrs.icon || 'more_vert')),
-            m('ul' + ulClasses, { 'for': attrs.id },
+            m('ul' + ulClasses, { 'for': this.id },
                 children.map((i: any) => {
                     let attrs: any = {}
                     let viClasses = '.mdl-menu__item';

@@ -1,8 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Slider max 1`] = `
+"<div class=\\"mdl-slider__container\\">
+  <input min=\\"0\\" max=\\"50\\" type=\\"range\\" class=\\"mdl-slider mdl-js-slider is-lowest-value is-upgraded\\" data-upgraded=\\",MaterialSlider\\">
+  <div class=\\"mdl-slider__background-flex\\">
+    <div class=\\"mdl-slider__background-lower\\"></div>
+    <div class=\\"mdl-slider__background-upper\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Slider min 1`] = `
+"<div class=\\"mdl-slider__container\\">
+  <input min=\\"50\\" max=\\"100\\" type=\\"range\\" class=\\"mdl-slider mdl-js-slider is-upgraded\\" data-upgraded=\\",MaterialSlider\\">
+  <div class=\\"mdl-slider__background-flex\\">
+    <div class=\\"mdl-slider__background-lower\\"></div>
+    <div class=\\"mdl-slider__background-upper\\"></div>
+  </div>
+</div>"
+`;
+
 exports[`Slider no options 1`] = `
 "<div class=\\"mdl-slider__container\\">
   <input min=\\"0\\" max=\\"100\\" type=\\"range\\" class=\\"mdl-slider mdl-js-slider is-lowest-value is-upgraded\\" data-upgraded=\\",MaterialSlider\\">
+  <div class=\\"mdl-slider__background-flex\\">
+    <div class=\\"mdl-slider__background-lower\\"></div>
+    <div class=\\"mdl-slider__background-upper\\"></div>
+  </div>
+</div>"
+`;
+
+exports[`Slider value 1`] = `
+"<div class=\\"mdl-slider__container\\">
+  <input min=\\"0\\" max=\\"100\\" type=\\"range\\" class=\\"mdl-slider mdl-js-slider is-upgraded\\" data-upgraded=\\",MaterialSlider\\">
   <div class=\\"mdl-slider__background-flex\\">
     <div class=\\"mdl-slider__background-lower\\"></div>
     <div class=\\"mdl-slider__background-upper\\"></div>

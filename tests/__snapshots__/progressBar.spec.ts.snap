@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProgressBar buffer 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-progress is-upgraded\\">
+"<div class=\\"mdl-progress is-upgraded\\" data-upgraded=\\",MaterialProgress\\">
   <div style=\\"width: 0%;\\" class=\\"progressbar bar bar1\\"></div>
   <div style=\\"width: 60%;\\" class=\\"bufferbar bar bar2\\"></div>
   <div style=\\"width: 40%;\\" class=\\"auxbar bar bar3\\"></div>
@@ -9,7 +9,7 @@ exports[`ProgressBar buffer 1`] = `
 `;
 
 exports[`ProgressBar inderterminant 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-progress mdl-progress--indeterminate is-upgraded\\">
+"<div class=\\"mdl-progress is-upgraded mdl-progress--indeterminate\\" data-upgraded=\\",MaterialProgress\\">
   <div style=\\"width: 0%;\\" class=\\"progressbar bar bar1\\"></div>
   <div style=\\"width: 100%;\\" class=\\"bufferbar bar bar2\\"></div>
   <div style=\\"width: 0%;\\" class=\\"auxbar bar bar3\\"></div>
@@ -17,15 +17,15 @@ exports[`ProgressBar inderterminant 1`] = `
 `;
 
 exports[`ProgressBar no options 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-progress is-upgraded\\">
+"<div class=\\"mdl-progress is-upgraded\\" data-upgraded=\\",MaterialProgress\\">
   <div style=\\"width: 0%;\\" class=\\"progressbar bar bar1\\"></div>
   <div style=\\"width: 100%;\\" class=\\"bufferbar bar bar2\\"></div>
   <div style=\\"width: 0%;\\" class=\\"auxbar bar bar3\\"></div>
 </div>"
 `;
 
-exports[`ProgressBar propgress 1`] = `
-"<div data-upgraded=\\",MaterialProgress\\" class=\\"mdl-progress is-upgraded\\">
+exports[`ProgressBar progress 1`] = `
+"<div class=\\"mdl-progress is-upgraded\\" data-upgraded=\\",MaterialProgress\\">
   <div style=\\"width: 50%;\\" class=\\"progressbar bar bar1\\"></div>
   <div style=\\"width: 100%;\\" class=\\"bufferbar bar bar2\\"></div>
   <div style=\\"width: 0%;\\" class=\\"auxbar bar bar3\\"></div>

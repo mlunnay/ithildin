@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Menu align bottom-left 1`] = `
-"<button align=\\"bottom-left\\" id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" align=\\"bottom-left\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -9,7 +9,7 @@ exports[`Menu align bottom-left 1`] = `
 `;
 
 exports[`Menu align bottom-right 1`] = `
-"<button align=\\"bottom-right\\" id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" align=\\"bottom-right\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline mdl-menu--bottom-right\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu mdl-menu--bottom-right\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -17,7 +17,7 @@ exports[`Menu align bottom-right 1`] = `
 `;
 
 exports[`Menu align no option 1`] = `
-"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -25,7 +25,7 @@ exports[`Menu align no option 1`] = `
 `;
 
 exports[`Menu align top-left 1`] = `
-"<button align=\\"top-left\\" id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" align=\\"top-left\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline mdl-menu--top-left\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu mdl-menu--top-left\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -33,7 +33,7 @@ exports[`Menu align top-left 1`] = `
 `;
 
 exports[`Menu align top-right 1`] = `
-"<button align=\\"top-right\\" id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" align=\\"top-right\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline mdl-menu--top-right\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu mdl-menu--top-right\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -41,7 +41,7 @@ exports[`Menu align top-right 1`] = `
 `;
 
 exports[`Menu children 1`] = `
-"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\">
@@ -54,7 +54,7 @@ exports[`Menu children 1`] = `
 `;
 
 exports[`Menu disabled child 1`] = `
-"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\">
@@ -66,7 +66,7 @@ exports[`Menu disabled child 1`] = `
 `;
 
 exports[`Menu icon 1`] = `
-"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">add</i></button>
+"<button icon=\\"add\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">add</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -74,7 +74,7 @@ exports[`Menu icon 1`] = `
 `;
 
 exports[`Menu id 1`] = `
-"<button id=\\"__menu__id\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__id\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__id\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\"></ul>
@@ -82,7 +82,7 @@ exports[`Menu id 1`] = `
 `;
 
 exports[`Menu menu divider child 1`] = `
-"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\">
@@ -94,7 +94,7 @@ exports[`Menu menu divider child 1`] = `
 `;
 
 exports[`Menu no options 1`] = `
-"<button id=\\"__menu__1\\" icon=\\"\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
+"<button icon=\\"\\" id=\\"__menu__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\" data-upgraded=\\",MaterialButton\\"><i class=\\"material-icons\\">more_vert</i></button>
 <div class=\\"mdl-menu__container is-upgraded\\">
   <div class=\\"mdl-menu__outline\\"></div>
   <ul for=\\"__menu__1\\" class=\\"mdl-menu mdl-js-menu\\" data-upgraded=\\",MaterialMenu\\"></ul>

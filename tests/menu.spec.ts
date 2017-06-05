@@ -3,12 +3,11 @@ import * as m from 'mithril';
 import { tidyHtml } from './util/snapshots';
 import { Menu } from '../src/menu';
 import { MithrilQuery } from './util/mithrilQuery';
-
-describe('Menu', () => {
-    beforeEach(() => {
+beforeEach(() => {
         // always have consistent auto menu id
         Menu.menuIdCounter = 0;
     });
+describe('Menu', () => {
     it('no options', () => {
         const cmp = new MithrilQuery(Menu);
         expect(cmp).selectorToHave('button#__menu__1', 1);

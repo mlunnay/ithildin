@@ -12,7 +12,7 @@ export const language = cssauron({
         return node.dom.id;
     },
     class: (node) => {
-        return (node.attrs && node.attrs.className) || '';
+        return node.dom.className;
     },
     parent: (node) => {
         return node.parent || node.instance && node.instance.parent || '';
@@ -23,7 +23,7 @@ export const language = cssauron({
         return children
     },
     attr: (node, attr) => {
-        const value = node.dom.getAttribute(attr);
+        const value = node.dom && node.dom.getAttribute(attr) || node.attrs[attr];
         return value === '' ? true : value;
     }
 });
@@ -41,7 +41,8 @@ export class MithrilQuery {
 
     get vnode() { return this.vnodes; }
 
-    constructor(vnode: m.Vnode<any, any> | m.Vnode<any, any>[] | m.ComponentTypes<any, any>) {
+    // inArray = true is needed if component has an input as the first element of the view. Only happens outside of browser and returning an array from the view breaks redraw.
+    constructor(vnode: m.Vnode<any, any> | m.Vnode<any, any>[] | m.ComponentTypes<any, any>, inArray: boolean = false) {
         if (typeof vnode === 'function' || typeof (<any>vnode).view === 'function')
             this.vnodes = m(<m.ComponentTypes<any, any>>vnode);
         else if (Array.isArray(vnode))
@@ -50,7 +51,11 @@ export class MithrilQuery {
             this.vnodes = <m.Vnode<any, any>>vnode;
 
         this.parentElement = document.createElement('div');
-        m.render(this.parentElement, this.vnodes);
+        // m.render(this.parentElement, this.vnodes);
+        if (inArray)
+            m.mount(this.parentElement, { view: () => [this.vnodes] });
+        else
+            m.mount(this.parentElement, { view: () => this.vnodes });
     }
 
     redraw() {
@@ -66,9 +71,11 @@ export class MithrilQuery {
 
         if (vnode.instance)
             return nodes.concat(join(vnode.instance.children.map((node: any) => {
+                if (node === undefined)
+                    return undefined;
                 node.parent = vnode;
                 return this._matchesInternal(selector, node);
-            })));
+            }).filter((n: any) => n !== undefined)));
         else
             return nodes.concat(join(vnode.children.map((node: any) => {
                 node.parent = vnode;
