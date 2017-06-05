@@ -34,7 +34,54 @@ function join(arrays: any[]) {
     }, [])
 }
 
-//TODO: add event triggering
+const keyCodeMap = {
+    backspace: 8
+    , command: 91
+    , tab: 9
+    , clear: 12
+    , enter: 13
+    , shift: 16
+    , ctrl: 17
+    , alt: 18
+    , capslock: 20
+    , escape: 27
+    , esc: 27
+    , space: 32
+    , pageup: 33
+    , pagedown: 34
+    , end: 35
+    , home: 36
+    , left: 37
+    , up: 38
+    , right: 39
+    , down: 40
+    , del: 46
+    , comma: 188
+    , f1: 112
+    , f2: 113
+    , f3: 114
+    , f4: 115
+    , f5: 116
+    , f6: 117
+    , f7: 118
+    , f8: 119
+    , f9: 120
+    , f10: 121
+    , f11: 122
+    , f12: 123
+    , ',': 188
+    , '.': 190
+    , '/': 191
+    , '`': 192
+    , '-': 189
+    , '=': 187
+    , ';': 186
+    , '[': 219
+    , '\\': 220
+    , ']': 221
+    , '\'': 222
+};
+
 export class MithrilQuery {
     private vnodes: m.Vnode<any, any> | m.Vnode<any, any>[];
     private parentElement: HTMLElement;
@@ -120,5 +167,94 @@ export class MithrilQuery {
 
     toHtml() {
         return (this.parentElement.innerHTML.trim());
+    }
+
+    trigger(selector: string,
+        eventName: string,
+        event?: Event,
+        silent: boolean = false) {
+        var attrs = this.first(selector).attrs
+        if (attrs[eventName]) {
+            attrs.eventName(event)
+            silent = silent || <boolean>(event && (<any>event).redraw === false)
+            silent || this.redraw()
+        }
+    }
+
+    triggerKey(selector: string,
+        eventName: string,
+        key: string | number,
+        options?: { [key: string]: any }) {
+        options = options || {}
+        var keyCode = typeof key === 'string' ? [key.toLowerCase()] || key.toUpperCase().charCodeAt(0) : key;
+        this.trigger(selector,
+            'on' + eventName,
+            <KeyboardEvent>{
+                target: options.target || { value: options.value },
+                altKey: !!options.altKey,
+                shiftKey: !!options.shiftKey,
+                ctrlKey: !!options.ctrlKey,
+                type: eventName,
+                keyCode: keyCode,
+                which: keyCode
+            }, !!options.silent)
+    }
+
+    focus(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'focus', event, silent);
+    }
+
+    click(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'click', event, silent);
+    }
+
+    blur(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'blur', event, silent);
+    }
+
+    mousedown(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mousedown', event, silent);
+    }
+
+    mouseup(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mouseup', event, silent);
+    }
+
+    mouseover(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mouseover', event, silent);
+    }
+
+    mouseout(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mouseout', event, silent);
+    }
+
+    mouseenter(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mouseenter', event, silent);
+    }
+
+    mouseleave(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'mouseleave', event, silent);
+    }
+
+    contextmenu(selector: string, event?: Event, silent: boolean = false) {
+        this.trigger(selector, 'contextmenu', event, silent);
+    }
+
+    keydown(selector: string,
+        key: string | number,
+        options?: { [key: string]: any }) {
+        this.triggerKey(selector, 'keydown', key, options);
+    }
+
+    keypress(selector: string,
+        key: string | number,
+        options?: { [key: string]: any }) {
+        this.triggerKey(selector, 'keypress', key, options);
+    }
+
+    keyup(selector: string,
+        key: string | number,
+        options?: { [key: string]: any }) {
+        this.triggerKey(selector, 'keyup', key, options);
     }
 }
