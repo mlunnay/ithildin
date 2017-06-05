@@ -3,6 +3,7 @@ import * as m from 'mithril';
 import { tidyHtml } from './util/snapshots';
 import { Menu } from '../src/menu';
 import { MithrilQuery } from './util/mithrilQuery';
+
 beforeEach(() => {
         // always have consistent auto menu id
         Menu.menuIdCounter = 0;

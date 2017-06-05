@@ -6,7 +6,7 @@ import * as m from 'mithril';
  * ## Attributes
  * | attribute | type    | default   | description |
  * |-----------|---------|-----------|------------|
- * | shadoe    | number  |           | Assigns variable shadow depths (2, 3, 4, 6, 8, or 16) to card |
+ * | shadow    | number  |           | Assigns variable shadow depths (2, 3, 4, 6, 8, or 16) to card |
  * | title     | object or string |       | Adds a title section to the card |
  * | title.expand | boolean | false  | Expands the title section to the width of the card |
  * | title.border | boolean | false  | Adds a border to the title section |

@@ -39,6 +39,7 @@
     "postcss": "^6.0.1",
     "tidy-html5": "^0.1.1",
     "ts-jest": "^20.0.4",
+    "tslib": "^1.7.1",
     "typescript": "^2.3.3",
     "webpack": "^2.6.0",
     "yields-keycode": "^1.1.0",

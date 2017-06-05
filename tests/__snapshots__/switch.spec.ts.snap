@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch checked 1`] = `
+"<label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><input type=\\"checkbox\\" id=\\"__switch__1\\" class=\\"mdl-switch__input\\"><span class=\\"mdl-switch__label\\">switch label</span></label>
+<div class=\\"mdl-switch__track\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"></label>
+</div>
+<div class=\\"mdl-switch__thumb\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__focus-helper\\"></span></label>
+</div><label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-checked is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__ripple-container mdl-js-ripple-effect mdl-ripple--center\\"><span class=\\"mdl-ripple\\"></span></span></label>"
+`;
+
+exports[`Switch id 1`] = `
+"<label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"switch_id\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><input type=\\"checkbox\\" id=\\"switch_id\\" class=\\"mdl-switch__input\\"><span class=\\"mdl-switch__label\\">switch label</span></label>
+<div class=\\"mdl-switch__track\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"switch_id\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"></label>
+</div>
+<div class=\\"mdl-switch__thumb\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"switch_id\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__focus-helper\\"></span></label>
+</div><label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"switch_id\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__ripple-container mdl-js-ripple-effect mdl-ripple--center\\"><span class=\\"mdl-ripple\\"></span></span></label>"
+`;
+
+exports[`Switch no options 1`] = `
+"<label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><input type=\\"checkbox\\" id=\\"__switch__1\\" class=\\"mdl-switch__input\\"><span class=\\"mdl-switch__label\\">switch label</span></label>
+<div class=\\"mdl-switch__track\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"></label>
+</div>
+<div class=\\"mdl-switch__thumb\\">
+  <label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__focus-helper\\"></span></label>
+</div><label class=\\"mdl-switch mdl-js-switch mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch,MaterialRipple\\"><span class=\\"mdl-switch__ripple-container mdl-js-ripple-effect mdl-ripple--center\\"><span class=\\"mdl-ripple\\"></span></span></label>"
+`;
+
+exports[`Switch ripple (false) 1`] = `
+"<label class=\\"mdl-switch mdl-js-switch is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch\\"><input type=\\"checkbox\\" id=\\"__switch__1\\" class=\\"mdl-switch__input\\"><span class=\\"mdl-switch__label\\">switch label</span></label>
+<div class=\\"mdl-switch__track\\">
+  <label class=\\"mdl-switch mdl-js-switch is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch\\"></label>
+</div>
+<div class=\\"mdl-switch__thumb\\">
+  <label class=\\"mdl-switch mdl-js-switch is-upgraded\\" for=\\"__switch__1\\" data-upgraded=\\",MaterialSwitch\\"><span class=\\"mdl-switch__focus-helper\\"></span></label>
+</div>"
+`;

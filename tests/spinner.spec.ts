@@ -2,7 +2,7 @@ import { } from 'jest';
 import * as m from 'mithril';
 import { tidyHtml } from './util/snapshots';
 import { Spinner } from '../src/spinner';
-import { MithrilQuery } from './util/mithrilQuery'
+import { MithrilQuery } from './util/mithrilQuery';
 
 describe('Spinner', () => {
     it('no options', () => {

@@ -1,13 +1,18 @@
-import * as Button from './src/button';
-import * as Badge from './src/badge';
-import * as Icon from './src/icon';
-import * as Layout from './src/layout';
-import * as Chip from './src/chip';
-import * as ProgressBar from './src/progressBar';
-import * as Spinner from './src/spinner';
-import * as Menu from './src/menu';
-import * as Slider from './src/slider';
-import * as Snackbar from './src/snackbar';
+export * from './src/button';
+export * from './src/badge';
+export * from './src/icon';
+export * from './src/layout';
+export * from './src/chip';
+export * from './src/progressBar';
+export * from './src/spinner';
+export * from './src/menu';
+export * from './src/slider';
+export * from './src/snackbar';
+export * from './src/checkbox';
+export * from './src/icontoggle';
+export * from './src/radio';
+export * from './src/switch';
+export * from './src/datatable';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
@@ -33,17 +38,4 @@ if (typeof (<any>Object).assign != 'function') {
     }
     return to;
   };
-}
-
-export {
-    Button,
-    Badge,
-    Icon,
-    Layout,
-    Chip,
-    ProgressBar,
-    Spinner,
-    Menu,
-    Slider,
-    Snackbar
 }
