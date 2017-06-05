@@ -13,8 +13,32 @@ import 'material-design-lite';
  * | shadow   | number |           | Assigns variable shadow depths (2, 3, 4, 6, 8, or 16) to the data table |
  */
 export class DataTable implements m.ClassComponent<m.Attributes> {
-    oncreate(vnode: any) {
-        componentHandler.upgradeElement(vnode.dom);
+    private dom: HTMLElement;
+    
+    /**
+     * returns a list indexes of selected rows
+     */
+    getSelected() {
+        const selectedElements = this.dom.querySelectorAll('tbody > tr');
+        var result: number[] = [];
+        for(var i = 0; i < selectedElements.length; i++) {
+            if(selectedElements[i].className.indexOf('is-selected') >= 0)
+                result.push(i);
+        }
+        return result;
+    }
+
+    /**
+     * Returns true if the given row is selected.
+     * @param index the index of the row to check.
+     */
+    isSelected(index: number) {
+        return this.dom.childElementCount > index && this.dom.children[index].className.indexOf('is-selected') >= 0;
+    }
+
+    oncreate(vnode: m.VnodeDOM<m.Attributes, any>) {
+        this.dom = <HTMLElement>vnode.dom;
+        componentHandler.upgradeElement(<HTMLElement>vnode.dom);
     }
 
     view(vnode: m.Vnode<m.Attributes, this>) {
