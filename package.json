@@ -46,6 +46,7 @@
     "zip-webpack-plugin": "^1.1.0"
   },
   "dependencies": {
+    "dialog-polyfill": "^0.4.7",
     "mithril": "^1.1.1"
   },
   "jest": {

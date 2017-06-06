@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog actions 1`] = `"<dialog class=\\"mdl-dialog\\" role=\\"dialog\\"><div class=\\"mdl-dialog__content\\"></div><div class=\\"mdl-dialog__actions\\"><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Ok<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Cancel<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button></div></dialog>"`;
+
+exports[`Dialog content 1`] = `"<dialog class=\\"mdl-dialog\\" role=\\"dialog\\"><div class=\\"mdl-dialog__content\\">Dialog content</div><div class=\\"mdl-dialog__actions\\"><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Ok<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button></div></dialog>"`;
+
+exports[`Dialog full width actions 1`] = `"<dialog class=\\"mdl-dialog\\" role=\\"dialog\\"><div class=\\"mdl-dialog__content\\"></div><div class=\\"mdl-dialog__actions mdl-dialog__actions--full-width\\"><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Ok<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button></div></dialog>"`;
+
+exports[`Dialog no options 1`] = `"<dialog class=\\"mdl-dialog\\" role=\\"dialog\\"><div class=\\"mdl-dialog__content\\"></div><div class=\\"mdl-dialog__actions\\"><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Ok<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button></div></dialog>"`;
+
+exports[`Dialog title 1`] = `"<dialog class=\\"mdl-dialog\\" role=\\"dialog\\"><div class=\\"mdl-dialog__title\\">Attention</div><div class=\\"mdl-dialog__content\\"></div><div class=\\"mdl-dialog__actions\\"><button class=\\"mdl-button mdl-js-button mdl-js-ripple-effect\\" data-upgraded=\\",MaterialButton,MaterialRipple\\">Ok<span class=\\"mdl-button__ripple-container\\"><span class=\\"mdl-ripple\\"></span></span></button></div></dialog>"`;

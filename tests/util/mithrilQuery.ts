@@ -23,8 +23,8 @@ export const language = cssauron({
         return children
     },
     attr: (node, attr) => {
-        const value = node.dom ? node.dom.getAttribute(attr) : node.attrs[attr];
-        return value === '' ? true : value;
+        const value = node.dom && node.dom.getAttribute(attr) || node.attrs && node.attrs[attr];
+        return value === '' ? true : value; 
     }
 });
 
@@ -34,7 +34,7 @@ function join(arrays: any[]) {
     }, [])
 }
 
-const keyCodeMap = {
+const keyCodeMap: {[key: string]: any} = {
     backspace: 8
     , command: 91
     , tab: 9
@@ -186,7 +186,7 @@ export class MithrilQuery {
         key: string | number,
         options?: { [key: string]: any }) {
         options = options || {}
-        var keyCode = typeof key === 'string' ? [key.toLowerCase()] || key.toUpperCase().charCodeAt(0) : key;
+        var keyCode = typeof key === 'string' ? keyCodeMap[key.toLowerCase()] || key.toUpperCase().charCodeAt(0) : key;
         this.trigger(selector,
             'on' + eventName,
             <KeyboardEvent>{

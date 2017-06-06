@@ -15,6 +15,7 @@ export * from './src/switch';
 export * from './src/datatable';
 export * from './src/textfield';
 export * from './src/tooltip';
+export * from './src/dialog';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
