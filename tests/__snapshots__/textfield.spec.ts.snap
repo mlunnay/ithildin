@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textfield floating label 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\"></label><input type=\\"text\\" id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\">
+</div>"
+`;
+
+exports[`Textfield icon 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield mdl-textfield--expandable is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\"><i class=\\"material-icons\\">search</i></label>
+  <div class=\\"mdl-textfield__expandable-holder\\">
+    <label for=\\"__textfield__1\\" class=\\"mdl-button mdl-js-button mdl-button--icon\\"><input type=\\"text\\" id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\"><label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\"></label></label>
+  </div>
+</div>"
+`;
+
+exports[`Textfield label 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\">text label</label><input type=\\"text\\" id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\">
+</div>"
+`;
+
+exports[`Textfield multiline 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\"></label>
+  <textarea id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\">
+</textarea>
+</div>"
+`;
+
+exports[`Textfield no options 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\"></label><input type=\\"text\\" id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\">
+</div>"
+`;
+
+exports[`Textfield validation 1`] = `
+"<div class=\\"mdl-textfield mdl-js-textfield is-upgraded\\" data-upgraded=\\",MaterialTextfield\\">
+  <label for=\\"__textfield__1\\" class=\\"mdl-textfield__label\\"></label><input pattern=\\"-?[0-9]*(.[0-9]+)?\\" type=\\"text\\" id=\\"__textfield__1\\" class=\\"mdl-textfield__input\\"><span class=\\"mdl-textfield__error\\">Input is not a number!</span>
+</div>"
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip id 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;
+
+exports[`Tooltip large 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip mdl-tooltip--large\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;
+
+exports[`Tooltip no options 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;
+
+exports[`Tooltip position (left) 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip mdl-tooltip--left\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;
+
+exports[`Tooltip position (right) 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip mdl-tooltip--right\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;
+
+exports[`Tooltip position (top) 1`] = `
+"<div>
+  <i id=\\"icon__1\\" class=\\"material-icon\\">add</i>
+  <div data-mdl-for=\\"icon__1\\" class=\\"mdl-tooltip mdl-tooltip--top\\" data-upgraded=\\",MaterialTooltip\\"></div>
+</div>"
+`;

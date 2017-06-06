@@ -23,7 +23,7 @@ export const language = cssauron({
         return children
     },
     attr: (node, attr) => {
-        const value = node.dom && node.dom.getAttribute(attr) || node.attrs[attr];
+        const value = node.dom ? node.dom.getAttribute(attr) : node.attrs[attr];
         return value === '' ? true : value;
     }
 });

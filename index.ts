@@ -13,6 +13,8 @@ export * from './src/icontoggle';
 export * from './src/radio';
 export * from './src/switch';
 export * from './src/datatable';
+export * from './src/textfield';
+export * from './src/tooltip';
 
 // polyfill for Object.assign.
 if (typeof (<any>Object).assign != 'function') {
